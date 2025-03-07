@@ -55,7 +55,10 @@ while True:
     cv.imshow('video', frame)
     if cv.waitKey(20) & 0xFF==ord('d'):
         break
-cv.waitKey(10)'''
+cv.waitKey(10)
+capture.release()
+cv.destroyAllWindows()
+'''
 
 #only for live stream
 '''def changeRes(width, height):
@@ -69,6 +72,24 @@ while True:
     cv.imshow('video',frame)
     if cv.waitKey(20) & 0xff==ord('e'):
         break'''
+
+#Class 2
+
+#draw on image
+import cv2 as cv
+import numpy as np
+
+blank = np.zeros((500,500,3), dtype='uint8')
+
+
+blank[:] = 255, 0, 0
+print(blank)
+cv.imshow('blank', blank)
+
+cv.waitKey(0)
+
+
+
 
 
 
